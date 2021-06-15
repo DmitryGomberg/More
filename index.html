@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+   <link
+      href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet" />
+   <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet" />
+
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>More</title>
+</head>
+
+<body>
+   <header class="header fixed-top">
+      <div class="container-md">
+         <div class="d-flex justify-content-between align-items-center height-8">
+            <a href="" class="header__logo">
+               <img src="img/logo.png" alt="">
+            </a>
+            <div class="header__number">
+               <a href="tel:79111111111" class="header__logo">
+                  <img src="img/phone-icon.png" alt="" class="me-2 d-inline-block">
+                  +7-911-111-11-11
+               </a>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg header-button dn">Записаться на мойку</button>
+         </div>
+      </div>
+   </header>
+   <section class="main mt-8">
+      <div class="container-md">
+         <div class="">
+            <div class="row d-flex justify-content-between align-items-center">
+               <div class="col-md-7">
+                  <div class="s1__title">
+                     Автомойка в Кудрово
+                  </div>
+                  <div class="s1__subtitle">
+                     В районе СПБ или у такой-то станции метро,<br> на улице (которая на слуху) <br>
+                     Если в услугу по умолчанию входят доп услуги <br> (коврики, воск или сушка - надо указать)
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <form class="s1__form">
+                     <input type="text" class="input-area spec" id="phone-number" placeholder="Телефон">
+                     <div id="sandbox-container">
+                        <div class="input-group date">
+                           <input type="text" class="form-control date-icon spec" placeholder="Дата">
+                           <span class="input-group-addon">
+                              <i class="glyphicon glyphicon-th"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="s1__time-wrap"></div>
+                     <input class="flatpickr flatpickr-input selector spec clock" type="text" placeholder="Время"
+                        data-id="timePicker24" readonly="readonly">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                           Согласен на обработку своих персональных
+                           данных
+                        </label>
+                     </div>
+                     <button type="submit" class="btn btn-primary btn-lg">Записаться на мойку</button>
+                  </form>
+               </div>
+            </div>
+            <div class="row d-flex justify-content-between min-m">
+               <div class="col-md-3">
+                  <div class="bg-dark mx-4 s1__card d-flex flex-column justify-content-center align-items-center">
+                     <img src="img/icon-hour.png" alt="" class="mb-3">
+                     <div class="s1__card-text">Круглосуточно</div>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="bg-dark mx-4 s1__card d-flex flex-column justify-content-center align-items-center">
+                     <img src="img/icon-place.png" alt="" class="mb-3">
+                     <div class="s1__card-text">15 постов</div>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="bg-dark mx-4 s1__card d-flex flex-column justify-content-center align-items-center">
+                     <img src="img/icon-car.png" alt="" class="mb-3">
+                     <div class="s1__card-text">Все виды мойки и чистки</div>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="bg-dark mx-4 s1__card d-flex flex-column justify-content-center align-items-center">
+                     <img src="img/icon-maoney.png" alt="" class="mb-3">
+                     <div class="s1__card-text">Mойка от 300 рублей</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   <script src="js/bootstrap-datepicker.min.js"></script>
+   <script src="js/bootstrap-datepicker.ru.min.js"></script>
+   <script src="js/script.js"></script>
+</body>
+
+</html>

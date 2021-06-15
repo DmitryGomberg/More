@@ -1,0 +1,156 @@
+.header {
+   background: #212934;
+}
+
+.container-md {}
+
+.height-8 {
+   min-height: 80px;
+}
+
+body {
+   font-family: 'Montserrat Alternates', sans-serif;
+   font-size: 16px;
+}
+
+.header-button {
+   border: 1px solid #C1A671;
+   border-radius: 5px;
+   background-color: transparent;
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 20px;
+   color: #FFFFFF;
+   padding: 15px 18px;
+}
+
+.header-button:hover {
+   background-color: #C1A671;
+   border: 1px solid #C1A671;
+}
+
+.header__logo {
+   font-weight: bold;
+   font-size: 20px;
+   line-height: 24px;
+   color: #FFFFFF;
+   text-decoration: none;
+   transition: all .2s ease;
+}
+
+.header__logo:hover {
+   color: #C1A671;
+}
+
+@media(max-width:640px) {
+   .dn {
+      display: none;
+   }
+}
+
+.mt-8 {
+   margin-top: 80px;
+}
+
+.datepicker {
+   top: 150px !important;
+}
+
+.date {
+   position: relative !important;
+}
+
+.s1__time-wrap {
+   position: relative !important;
+}
+
+.date::after {
+   content: url('../img/calendar.png');
+   position: absolute;
+   right: 16px;
+   top: 13px;
+   width: 34px;
+   height: 34px;
+   z-index: 3;
+}
+
+.s1__time-wrap::after {
+   content: url('../img/time.png');
+   position: absolute;
+   right: 16px;
+   top: 15px;
+   z-index: 3;
+}
+
+.min-m {
+   margin: 0 -28px;
+}
+
+.s1__card {
+   background: #212934;
+   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+   border-radius: 10px;
+   padding: 30px 20px;
+   text-align: center;
+}
+
+.s1__card-text {
+   font-family: Montserrat;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 20px;
+   color: #FFFFFF;
+}
+
+.main {
+   background-image: url(../img/s1-bg.png);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   /* min-height: 730px; */
+   padding: 85px 0 36px 0;
+}
+
+.s1__title {
+   font-weight: bold;
+   font-size: 48px;
+   line-height: 59px;
+   color: #FFFFFF;
+   margin-bottom: 55px;
+}
+
+.s1__subtitle {
+   font-family: Montserrat;
+   font-weight: bold;
+   font-size: 24px;
+   line-height: 170%;
+   color: #FFFFFF;
+}
+
+.s1__form {
+   background: rgba(255, 255, 255, 0.23);
+   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+   border-radius: 10px;
+   max-width: 410px;
+   width: 100%;
+   padding: 45px 45px 30px 45px;
+   margin-left: auto;
+}
+
+.s1__form input.spec {
+   background: #E9E9E9;
+   border-radius: 5px;
+   border: none;
+   margin-bottom: 22px;
+   padding: 20px;
+   font-family: Montserrat;
+   font-size: 14px;
+   line-height: 17px;
+   color: #000000;
+   max-width: 100%;
+   width: 100%;
+}
+
+.s1__form input::placeholder {
+   color: #000000;
+}
