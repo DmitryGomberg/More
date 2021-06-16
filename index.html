@@ -21,6 +21,7 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
    <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <link rel="stylesheet" href="css/style.css">
    <title>More</title>
 </head>
@@ -156,10 +157,10 @@
       <div class="container-md py-75  d-flex justify-content-end flex-column align-items-end">
          <div class="s3__title title decor text-center text-md-right">Запишитесь на мойку в удобное время</div>
          <div class="row d-flex justify-content-end mx-auto mx-md-0">
-            <div class="col-12 col-md-8 px-5 py-4 s3__form mx-md-2">
-               <form action="" class="w-100">
+            <div class="col-12 col-md-8 px-1 px-md-4 py-4 s3__form mx-md-2">
+               <form action="" class="w-100 d-flex flex-column align-items-center">
                   <div class="row w-100 mb-4">
-                     <div class="col w-100">
+                     <div class="col-sm-6 mb-0 mb-md-3">
                         <div id="sandbox-container">
                            <div class="input-group date">
                               <input type="text" class="form-control date-icon spec s3__input" placeholder="Дата">
@@ -170,7 +171,7 @@
                         </div>
 
                      </div>
-                     <div class="col w-100">
+                     <div class="col-sm-6">
                         <div class="s1__time-wrap">
                            <input class="flatpickr flatpickr-input selector spec clock w-100 s3__input" type="text"
                               placeholder="Время" data-id="timePicker24" readonly="readonly">
@@ -178,7 +179,7 @@
                      </div>
                   </div>
                   <div class="row w-100 mb-4">
-                     <div class="col w-100">
+                     <div class="col-sm-6 mb-0 mb-md-3">
                         <div class="select">
                            <input class="select__input" type="hidden" name="">
                            <div class="select__head s3__input">Транспортное средство</div>
@@ -191,7 +192,7 @@
                         </div>
 
                      </div>
-                     <div class="col w-100">
+                     <div class="col-sm-6">
                         <div class="select">
                            <input class="select__input" type="hidden" name="">
                            <div class="select__head s3__input">Дополнительные услуги</div>
@@ -225,15 +226,15 @@
                      </div>
                   </div>
                   <div class="row w-100 mb-4">
-                     <div class="col w-100">
+                     <div class="col-sm-6 mb-0 mb-md-3">
                         <input type="text" class="w-100 s3__input" placeholder="Имя">
                      </div>
-                     <div class="col w-100">
+                     <div class="col-sm-6">
                         <input type="text" class="w-100 s3__input" placeholder="Телефон" id="phone-number-m">
                      </div>
                   </div>
-                  <div class="row w-100 mb-4 my-4">
-                     <div class="col w-100">
+                  <div class="row w-100 mb-1 my-1 mb-md-4 my-md-4">
+                     <div class="col-sm-6">
                         <div class="form-check">
                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
                            <label class="form-check-label s1__check" for="flexCheckChecked">
@@ -256,9 +257,77 @@
    </section>
 
    <section class="s3__options">
-      <div class="container-md py-75">
+      <div class="container-md py-75 d-flex justify-content-center flex-column align-items-center">
+         <div class="s3__title title decor text-center black mb-5">Комплексы мойки авто</div>
+         <div class="s4_-cards-contain">
+            <div class="swiper-container">
+               <div class="swiper-wrapper">
+                  <div class="slider-card col-xl-4 col-sm-6 col-12 mb-4 swiper-slide">
+                     <div class="s2__card d-flex flex-column justify-content-between align-items-center s4__card">
+                        <img src="img/s4__car1.png" alt="">
+                        <div class="s2__card-title my-3">Быстрая мойка</div>
+                        <div class="s2__card-description text-center mb-3">Сбой грязи, льда, снега и соли с кузова
+                           автомобиля
+                        </div>
+                        <div class="s2__card-price mb-4">300 руб</div>
+                        <div class="card__button">Записаться на мойку</div>
+                     </div>
+                  </div>
+                  <div class="slider-card col-xl-4 col-sm-6 col-12 mb-4 swiper-slide">
+                     <div class="s2__card d-flex flex-column justify-content-between align-items-center s4__card">
+                        <img src="img/s4__car2.png" alt="">
+                        <div class="s2__card-title my-3">Стандартная мойка</div>
+                        <div class="s2__card-description text-center mb-3">Кузов, коврики</div>
+                        <div class="s2__card-price mb-4">500 руб</div>
+                        <div class="card__button">Записаться на мойку</div>
+                     </div>
+                  </div>
+                  <div class="slider-card col-xl-4 col-sm-6 col-12 mb-4 swiper-slide">
+                     <div class="s2__card d-flex flex-column justify-content-between align-items-center s4__card">
+                        <img src="img/s4__car3.png" alt="">
+                        <div class="s2__card-title my-3">Фреш</div>
+                        <div class="s2__card-description text-center mb-3">Безконтактная мойка с ‘’обезжиркой’’ - то,
+                           что
+                           надо!</div>
+                        <div class="s2__card-price mb-4">740 руб <s class="sale">1040 руб</s></div>
+                        <div class="card__button">Записаться на мойку</div>
+                     </div>
+                  </div>
 
+                  <div class="slider-card col-xl-4 col-sm-6 col-12 mb-4 swiper-slide">
+                     <div class="s2__card d-flex flex-column justify-content-between align-items-center s4__card">
+                        <img src="img/s4__car4.png" alt="">
+                        <div class="s2__card-title my-3">Люкс-Экстра</div>
+                        <div class="s2__card-description text-center mb-3">Популярный комплекс!</div>
+                        <div class="s2__card-price mb-4">1200 руб<s class="sale">1690 руб</s></div>
+                        <div class="card__button">Записаться на мойку</div>
+                     </div>
+                  </div>
+                  <div class="slider-card col-xl-4 col-sm-6 col-12 mb-4 swiper-slide">
+                     <div class="s2__card d-flex flex-column justify-content-between align-items-center s4__card">
+                        <img src="img/s4__car5.png" alt="">
+                        <div class="s2__card-title my-3">Премиум</div>
+                        <div class="s2__card-description text-center mb-3">Входит все, что нужно для ощущения новизны!
+                        </div>
+                        <div class="s2__card-price mb-4">1640 руб<s class="sale">2640 руб</s></div>
+                        <div class="card__button">Записаться на мойку</div>
+                     </div>
+                  </div>
+                  <div class="slider-card col-xl-4 col-sm-6 col-12 mb-4 swiper-slide">
+                     <div class="s2__card d-flex flex-column justify-content-between align-items-center s4__card">
+                        <img src="img/s4__car6.png" alt="">
+                        <div class="s2__card-title my-3">S1 - Трехфазная мойка</div>
+                        <div class="s2__card-description text-center mb-3">Детейлинг мойка кузова + ковры </div>
+                        <div class="s2__card-price mb-4">850 руб</div>
+                        <div class="card__button">Записаться на мойку</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-pagination"></div>
+            </div>
+         </div>
       </div>
+
    </section>
    <script>
       DynamicAdapt("max").init();
@@ -273,6 +342,7 @@
    <script src="js/bootstrap-datepicker.min.js"></script>
    <script src="js/bootstrap-datepicker.ru.min.js"></script>
    <script src="js/dynamicAdapt.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script src="js/script.js"></script>
 </body>
 
