@@ -360,6 +360,12 @@ input:active {
    .s1__subtitle {
       font-size: 20px;
    }
+
+   .s3__title {
+      max-width: 487px;
+      margin-left: auto;
+      margin-right: auto;
+   }
 }
 
 @media (max-width: 576px) {
@@ -440,7 +446,6 @@ input:active {
    background-size: cover;
    background-repeat: no-repeat;
    background-position: left;
-   margin-bottom: 1000px;
 }
 
 .s3__title {
@@ -460,7 +465,7 @@ input:active {
    content: url(../img/title-decor.png);
    position: absolute;
    left: -39px;
-   bottom: 0;
+   top: 4px;
 }
 
 .py-75 {
@@ -568,9 +573,11 @@ input:active {
    background-color: rgba(224, 229, 231, 1);
 }
 
-.flatpickr-calendar.arrowTop:before, .flatpickr-calendar.arrowTop:after {
-  display: none;
+.flatpickr-calendar.arrowTop:before,
+.flatpickr-calendar.arrowTop:after {
+   display: none;
 }
-.card__button-main{
+
+.card__button-main {
    display: inline-block;
 }
