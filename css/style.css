@@ -154,3 +154,34 @@ body {
 .s1__form input::placeholder {
    color: #000000;
 }
+
+.form-check-input[type=checkbox] {
+   border-radius: 0px;
+   border-color: #C1A671;
+}
+
+.form-check-input:checked {
+   background-color: #C1A671;
+   border-color: #C1A671;
+}
+
+.form-check-input:focus {
+   box-shadow: none;
+}
+
+.s1__check {
+   font-family: Montserrat;
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 15px;
+   color: #FFFFFF;
+   margin-left: 12px;
+}
+
+.s1_button{
+   background: #212934;
+   border: 1px solid transparent;
+   margin: 0 auto;
+   display: block;
+   margin-top: 20px;
+}
