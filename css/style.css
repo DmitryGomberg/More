@@ -22,11 +22,21 @@ body {
    line-height: 20px;
    color: #FFFFFF;
    padding: 15px 18px;
+   box-shadow: none;
 }
-
+.header-button:active{
+   box-shadow: none;
+}
 .header-button:hover {
-   background-color: #C1A671;
+   background-color: #C1A671!important;
+   border: 1px solid #C1A671!important;
+   box-shadow: none;
+}
+.header-button:focus {
    border: 1px solid #C1A671;
+   border-radius: 5px;
+   background-color: transparent;
+   box-shadow: none;
 }
 
 .header__logo {
