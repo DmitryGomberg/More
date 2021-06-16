@@ -24,14 +24,17 @@ body {
    padding: 15px 18px;
    box-shadow: none;
 }
-.header-button:active{
+
+.header-button:active {
    box-shadow: none;
 }
+
 .header-button:hover {
-   background-color: #C1A671!important;
-   border: 1px solid #C1A671!important;
+   background-color: #C1A671 !important;
+   border: 1px solid #C1A671 !important;
    box-shadow: none;
 }
+
 .header-button:focus {
    border: 1px solid #C1A671;
    border-radius: 5px;
@@ -62,10 +65,6 @@ body {
    margin-top: 80px;
 }
 
-.datepicker {
-   top: 150px !important;
-}
-
 .date {
    position: relative !important;
 }
@@ -92,9 +91,18 @@ body {
    z-index: 3;
 }
 
-.min-m {
-   margin: 0 -28px;
+@media(min-width:900px) {
+   .min-m {
+      margin: 0 -28px;
+   }
 }
+
+@media(max-width:1000px) {
+   .s1__card {
+      padding: 30px 11px !important;
+   }
+}
+
 
 .s1__card {
    background: #212934;
@@ -161,6 +169,11 @@ body {
    width: 100%;
 }
 
+.s1__form input.spec.active {
+   background: #E9E9E9 !important;
+   color: #000000 !important;
+}
+
 .s1__form input::placeholder {
    color: #000000;
 }
@@ -188,10 +201,156 @@ body {
    margin-left: 12px;
 }
 
-.s1_button{
+.s1_button {
    background: #212934;
    border: 1px solid transparent;
    margin: 0 auto;
    display: block;
    margin-top: 20px;
+}
+
+.datepicker-dropdown {
+   transform: translate(-1px, 58px);
+}
+
+.datepicker-dropdown:after,
+.datepicker-dropdown:before {
+   display: none;
+}
+
+.datepicker-days {
+   width: 301px;
+   padding: 10px;
+}
+
+.table-condensed {
+   width: 100%;
+}
+
+.table-condensed>tfoot {
+   display: none;
+}
+
+.table-condensed>tbody {
+   padding-bottom: 20px;
+}
+
+
+.datepicker-switch {
+   font-family: Montserrat;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 24px;
+   letter-spacing: 0.12px;
+   color: #000000;
+   padding-top: 13px;
+}
+
+.dow {
+   font-family: Montserrat;
+   font-weight: 600;
+   font-size: 10px;
+   line-height: 16px;
+   letter-spacing: 1.5px;
+   color: #333333;
+}
+
+.day {
+   font-family: IBM Plex Sans;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 22px;
+   letter-spacing: 0.22px;
+   color: #7A7585;
+   padding: 5px;
+}
+
+.old {
+   color: #BDBDBD !important;
+}
+
+.active {
+   color: #fff !important;
+   position: relative !important;
+   z-index: 2 !important;
+   background-color: transparent !important;
+}
+
+.active::before {
+   content: '';
+   position: absolute;
+   width: 32px;
+   height: 32px;
+   background: #BF0000;
+   z-index: -1;
+   top: 0;
+   right: 50%;
+   transform: translateX(50%);
+   border-radius: 50%;
+}
+
+.numInpu {
+   user-select: none;
+}
+
+.numInpu:active {
+   user-select: none;
+}
+
+.numInpu:focus {
+   user-select: none;
+}
+
+input:focus {
+   box-shadow: none;
+}
+
+input:active {
+   box-shadow: none;
+}
+
+@media (max-width: 1400px) {
+   .s1__card {
+      min-height: 150px;
+      margin: 10px 0;
+   }
+}
+
+@media (max-width: 768px) {
+   .s1__form {
+      margin: 0 auto;
+      margin-top: 30px;
+   }
+
+   .s1__title {
+      margin-bottom: 28px;
+      font-size: 42px;
+   }
+
+   .s1__subtitle {
+      font-size: 20px;
+   }
+}
+
+@media (max-width: 576px) {
+   .s1__title {
+      font-size: 36px;
+   }
+
+   .s1__subtitle {
+      font-size: 16px;
+   }
+
+   .main {
+      padding: 45px 0 36px 0;
+   }
+
+   .s1__form {
+      background: rgba(255, 255, 255, 0.23);
+      box-shadow: 0px 0px 40px rgb(0 0 0 / 25%);
+      border-radius: 10px;
+      max-width: 410px;
+      width: 100%;
+      padding: 28px 8px 20px 8px;
+   }
 }
