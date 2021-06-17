@@ -367,6 +367,9 @@ input:active {
       margin-right: auto;
    }
 
+   .s5__services>.container-md {
+      padding-bottom: 11px;
+   }
 }
 
 @media (max-width: 576px) {
@@ -481,8 +484,12 @@ input:active {
    padding-bottom: 85px;
 }
 
-.s3__form {
+.s3__form-wrap {
    max-width: 770px;
+   width: 100%;
+}
+
+.s3__form {
    width: 100%;
 }
 
@@ -652,14 +659,116 @@ input:active {
       margin-top: -80px;
       max-width: 100%;
    }
-   
+
 }
+
 @media(max-width:536px) {
    .s5__car {
       margin-top: -45px;
    }
+
    .s3__title {
-  font-size: 24px;
-  line-height: 30px;
+      font-size: 24px;
+      line-height: 30px;
+   }
 }
+
+.comment-slide {
+   background: #FFFFFF;
+   border: 1px solid #C1A671;
+   box-sizing: border-box;
+   border-radius: 5px;
+   padding: 21px 35px;
+   position: relative;
+   display: flex;
+}
+
+.s5__comments-slider {
+   width: 100%;
+   max-width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+   min-width: 0;
+}
+
+.comment-slide::after {
+   position: absolute;
+   content: url(../img/com-decor.png);
+   top: 21px;
+   right: 36px;
+}
+
+.comment-slide::before {
+   position: absolute;
+   content: '';
+   width: 89%;
+   height: 1px;
+   background-color: #C1A671;
+   right: 50%;
+   bottom: 50px;
+   transform: translateX(50%);
+}
+
+.s5__com-name {
+   font-family: Montserrat;
+   font-weight: 600;
+   font-size: 18px;
+   line-height: 22px;
+   color: #000000;
+   margin-bottom: 5px;
+}
+
+.s5__com-comment {
+   font-family: Montserrat;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 20px;
+   color: #000000;
+   margin-bottom: 45px;
+   margin-top: 20px;
+   flex: 1 0 auto;
+   min-height: 42px;
+}
+
+.s5__com-date {
+   font-family: Montserrat;
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 15px;
+   color: #BF0000;
+}
+
+.s5__comm-content {
+   display: flex;
+   flex-direction: column;
+}
+
+.swiper-comments>.swiper-pagination-bullets {
+   bottom: 0;
+}
+
+.swiper-comments {
+   padding-bottom: 60px;
+}
+
+.swiper-container {
+   width: 100%;
+}
+.s6__title{
+   max-width: 636px;
+   margin-bottom: 59px;
+}
+.s6__subtitle {
+   font-family: Montserrat;
+   display: inline-block;
+   font-weight: 600;
+   font-size: 24px;
+   line-height: 29px;
+   text-align: center;
+   color: #272121;
+}
+.py-40 {
+   padding-bottom: 155px;
 }
