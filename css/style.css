@@ -27,7 +27,7 @@
 
 
 
-.container-md {}
+.container-md {max-width: 1170px;}
 
 .height-8 {
    min-height: 80px;
@@ -456,6 +456,11 @@ input:active {
    line-height: 20px;
    color: #FFFFFF;
    cursor: pointer;
+   border: 1px solid transparent;
+   transition: all .3s ease;
+}
+.card__button:hover{
+   border: 1px solid #C1A671;
 }
 
 .s3__form {
@@ -811,6 +816,7 @@ input:focus {
 
 .s6__button {
    transition: all .2s ease;
+   border: 1px solid #C1A671;
 }
 
 .form-check-input {
