@@ -89,3 +89,10 @@ $(window).on('load resize', function () {
       $('.slider-card').addClass('swiper-slide');
    }
 });
+
+var Map;
+ 
+function init() {
+  // вот команда отключения масштабирования по скроллу
+  Map.behaviors.disable('scrollZoom');
+}

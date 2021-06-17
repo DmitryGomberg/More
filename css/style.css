@@ -370,6 +370,18 @@ input:active {
    .s5__services>.container-md {
       padding-bottom: 11px;
    }
+
+   .map>iframe {
+      height: 254px;
+   }
+
+   .s6__subtitle {
+      font-size: 20px !important;
+   }
+
+   .py-40 {
+      padding-bottom: 157px !important;
+   }
 }
 
 @media (max-width: 576px) {
@@ -498,7 +510,8 @@ input:active {
 }
 
 .s3__input {
-   background: #E9E9E9;
+   background-color: #E9E9E9 !important;
+   color: #000 !important;
    border-radius: 5px !important;
    padding: 20px;
    border: none;
@@ -512,7 +525,9 @@ input:active {
    min-height: 446px;
 }
 
-
+input:focus {
+   outline: none;
+}
 
 .select {
    position: relative;
@@ -756,10 +771,12 @@ input:active {
 .swiper-container {
    width: 100%;
 }
-.s6__title{
+
+.s6__title {
    max-width: 636px;
    margin-bottom: 59px;
 }
+
 .s6__subtitle {
    font-family: Montserrat;
    display: inline-block;
@@ -769,6 +786,69 @@ input:active {
    text-align: center;
    color: #272121;
 }
+
 .py-40 {
-   padding-bottom: 155px;
+   padding-bottom: 206px;
+}
+
+.s6__form {
+   background: #212934;
+   box-shadow: 0px 0px 10px rgba(203, 203, 203, 0.25);
+   border-radius: 5px;
+   padding: 33px 50px;
+   margin-top: 80px;
+   position: relative;
+}
+
+.s6__form::before {
+   content: url(../img/merc.svg);
+   position: absolute;
+   transform: rotate(5deg);
+   bottom: -144px;
+   left: -324px;
+}
+
+.s6__button {
+   transition: all .2s ease;
+}
+
+.form-check-input {
+   width: 20px;
+   height: 20px;
+}
+
+
+.z2 {
+   z-index: 2;
+}
+
+@media(max-width:990px) {
+   .s6__form::before {
+      content: url(../img/merc.svg);
+      position: absolute;
+      transform: rotate(5deg);
+      bottom: -159px;
+      left: -324px;
+   }
+}
+
+@media(max-width:520px) {
+   .s6__form::before {
+      display: none;
+   }
+   .s6__check{
+      position: relative;
+   }
+   .s6__check::before{
+      position: absolute;
+      content: url('../img/merc-small.svg');
+      left: 0;bottom: 40px;z-index: 2;
+   }
+   .s6__form{
+      padding: 33px 20px;
+   }
+}
+
+.p0{
+   padding: 0!important;
 }

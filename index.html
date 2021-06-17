@@ -72,8 +72,8 @@
                            data-id="timePicker24" readonly="readonly">
                      </div>
                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="form-check-label s1__check" for="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked>
+                        <label class="form-check-label s1__check" for="flexCheckChecked1">
                            Согласен на обработку своих персональных
                            данных
                         </label>
@@ -236,8 +236,8 @@
                   <div class="row w-100 mb-1 my-1 mb-md-4 my-md-4">
                      <div class="col-sm-6">
                         <div class="form-check">
-                           <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
-                           <label class="form-check-label s1__check" for="flexCheckChecked">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2" checked="">
+                           <label class="form-check-label s1__check" for="flexCheckChecked2">
                               Согласен на обработку своих персональных
                               данных
                            </label>
@@ -468,8 +468,66 @@
             ежедневно забронировано
          </div>
          <div class="s6__subtitle">Проверьте, свободна ли мойка в удобное для вас время</div>
+         <div class="row w-100">
+            <div class="col-lg-8 col-12 w-100 p0">
+               <form action="" class="w-100 d-flex flex-column align-items-center s6__form">
+                  <div class="row w-100 z2">
+                     <div class="col-sm-6 mb-0 mb-md-3">
+                        <div id="sandbox-container">
+                           <div class="input-group date">
+                              <input type="text" class="form-control date-icon spec s3__input" placeholder="Дата">
+                              <span class="input-group-addon">
+                                 <i class="glyphicon glyphicon-th"></i>
+                              </span>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="col-sm-6 mb-md-3">
+                        <div class="s1__time-wrap">
+                           <input class="flatpickr flatpickr-input selector spec clock w-100 s3__input" type="text"
+                              placeholder="Время" data-id="timePicker24" readonly="readonly">
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="row w-100 z2">
+                     <div class="col-sm-6 mb-0 mb-md-3">
+                        <input type="text" class="w-100 s3__input" placeholder="Имя">
+                     </div>
+                     <div class="col-sm-6 mb-md-3">
+                        <input type="text" class="w-100 s3__input" placeholder="Телефон" id="phone-number-m">
+                     </div>
+                  </div>
+                  <div class="row w-100 z2">
+                     <div class="col-10">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
+                           <label class="form-check-label s1__check" for="flexCheckChecked">
+                              Согласен на обработку своих персональных
+                              данных
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row w-100 mt-4 z2">
+                     <div class="col w-100 text-center">
+                        <div class="card__button card__button-main s6__button header-button">Узнать, свободна ли мойка
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+
       </div>
    </section>
+   <section class="map w-100 mb-5">
+      <iframe
+         src="https://yandex.ru/map-widget/v1/?um=constructor%3A5d2b165f86293be8aff2f9ac085ccc7b37c06ea498c6be7f2b26e7b99f18b89e&amp;source=constructor"
+         width="100%" height="470" frameborder="0"></iframe>
+   </section>
+
    <script>
       DynamicAdapt("max").init();
    </script>
