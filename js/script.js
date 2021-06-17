@@ -1,6 +1,8 @@
 $(document).ready(function () {
-   $('#phone-number').mask('+375 (00) 000-00-00');
-   $('#phone-number-m').mask('+375 (00) 000-00-00');
+   $('.preloader, .overlay').fadeOut();
+   $('#phone-number').mask('+7-000-000-00-00');
+   $('#phone-number-m').mask('+7-000-000-00-00');
+   $('#phone-number-m-m').mask('+7-000-000-00-00');
    $('#sandbox-container .input-group.date').datepicker({
       startDate: "today",
       clearBtn: true,
@@ -14,9 +16,6 @@ $(document).ready(function () {
       dateFormat: "H:i",
       time_24hr: true
    });
-
-
-
 
    $('.select').on('click', '.select__head', function () {
       if ($(this).hasClass('open')) {
@@ -37,14 +36,14 @@ $(document).ready(function () {
       $(this).parent().prev().prev().val($(this).text());
    });
 
-   $(document).click(function (e) {
-      if (!$(e.target).closest('.select').length) {
-         $('.select__head').removeClass('open');
-         $('.select__list').fadeOut();
-      }
-   });
-});
 
+});
+$(document).click(function (e) {
+   if (!$(e.target).closest('.select').length) {
+      $('.select__head').removeClass('open');
+      $('.select__list').fadeOut();
+   }
+});
 const swiper = new Swiper('.swiper-types', {
    pagination: {
       el: '.swiper-pagination-types',
@@ -91,8 +90,30 @@ $(window).on('load resize', function () {
 });
 
 var Map;
- 
+
 function init() {
-  // вот команда отключения масштабирования по скроллу
-  Map.behaviors.disable('scrollZoom');
+   // вот команда отключения масштабирования по скроллу
+   Map.behaviors.disable('scrollZoom');
+}
+
+const MenuLinks = document.querySelectorAll('.scrollto[data-goto]');
+
+if(MenuLinks.length > 0) {
+   MenuLinks.forEach(menuLink => {
+      menuLink.addEventListener("click", onMenulinkClick);
+   })
+   function onMenulinkClick(e){
+      const menuLink = e.target;
+      if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
+         e.preventDefault();
+         const gotoBlock = document.querySelector(menuLink.dataset.goto);
+         const gotoBlockvalue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+         window.scrollTo({
+            top: gotoBlockvalue,
+            behavior: "smooth"
+         });
+         
+      }
+      
+   }
 }

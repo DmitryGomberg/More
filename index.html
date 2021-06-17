@@ -39,7 +39,7 @@
                   +7-911-111-11-11
                </a>
             </div>
-            <button type="button" class="btn btn-primary btn-lg header-button dn">Записаться на мойку</button>
+            <a data-goto=".s3__record" type="button" href="" class="btn btn-primary btn-lg header-button dn scrollto">Записаться на мойку</a>
          </div>
       </div>
    </header>
@@ -153,7 +153,7 @@
          </div>
       </div>
    </section>
-   <section class="s3__record">
+   <section class="s3__record" id="s3__record">
       <div class="container-md py-75  d-flex justify-content-end flex-column align-items-end">
          <div class="s3__title title decor text-center text-md-right">Запишитесь на мойку в удобное время</div>
          <div class="row d-flex justify-content-end mx-auto mx-md-0 s3__form-wrap">
@@ -496,7 +496,7 @@
                         <input type="text" class="w-100 s3__input" placeholder="Имя">
                      </div>
                      <div class="col-sm-6 mb-md-3">
-                        <input type="text" class="w-100 s3__input" placeholder="Телефон" id="phone-number-m">
+                        <input type="text" class="w-100 s3__input" placeholder="Телефон" id="phone-number-m-m">
                      </div>
                   </div>
                   <div class="row w-100 z2">
@@ -527,7 +527,32 @@
          src="https://yandex.ru/map-widget/v1/?um=constructor%3A5d2b165f86293be8aff2f9ac085ccc7b37c06ea498c6be7f2b26e7b99f18b89e&amp;source=constructor"
          width="100%" height="470" frameborder="0"></iframe>
    </section>
-
+   <footer class="footer p-3">
+      <div class="container-md">
+         <div
+            class="d-flex justify-content-between align-items-center height-8 w-100 mx-auto header__bottom flex-column flex-md-row pb-4 pt-3">
+            <a href="" class="header__logo mb-4 mb-md-0">
+               <img src="img/logo.png" alt="">
+            </a>
+            <div class="header__number mb-4 mb-md-0">
+               <a href="tel:79111111111" class="header__logo">
+                  <img src="img/phone-icon.png" alt="" class="me-2 d-inline-block">
+                  +7-911-111-11-11
+               </a>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg header-button">Записаться на мойку</button>
+         </div>
+         <div class="copyright d-flex align-items-start flex-column py-4">
+            <div class="css white pb-3">© 2021 «MORE» </div>
+            <div class="cookies white">
+               Продолжая использовать наш сайт, вы даете согласие на обработку файлов Cookies и других пользовательских
+               данных, в соответствии с Политикой конфиденциальности.
+            </div>
+         </div>
+      </div>
+   </footer>
+   <div class="overlay"></div>
+   <div class="preloader"></div>
    <script>
       DynamicAdapt("max").init();
    </script>
