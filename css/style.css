@@ -27,7 +27,9 @@
 
 
 
-.container-md {max-width: 1170px;}
+.container-md {
+   max-width: 1170px;
+}
 
 .height-8 {
    min-height: 80px;
@@ -54,11 +56,14 @@ body {
    box-shadow: none;
 }
 
-.header-button:hover {
-   background-color: #C1A671 !important;
-   border: 1px solid #C1A671 !important;
-   box-shadow: none;
+@media(min-width:992px) {
+   .header-button:hover {
+      background-color: #C1A671 !important;
+      border: 1px solid #C1A671 !important;
+      box-shadow: none;
+   }
 }
+
 
 .header-button:focus {
    border: 1px solid #C1A671;
@@ -74,6 +79,7 @@ body {
    color: #FFFFFF;
    text-decoration: none;
    transition: all .2s ease;
+   max-width: 34px;
 }
 
 .header__logo:hover {
@@ -83,6 +89,16 @@ body {
 @media(max-width:640px) {
    .dn {
       display: none;
+   }
+
+   .decor::before {
+      left: -39px !important;
+   }
+}
+
+@media(max-width:340px) {
+   .s1__card {
+      min-height: 170px !important;
    }
 }
 
@@ -294,6 +310,14 @@ body {
    letter-spacing: 0.22px;
    color: #7A7585;
    padding: 5px;
+   position: relative;
+   z-index: 1;
+}
+
+.datepicker table tr td.day:hover,
+.datepicker table tr td.focused {
+   background: #fff;
+   cursor: pointer;
 }
 
 .old {
@@ -301,13 +325,21 @@ body {
 }
 
 .active {
-   color: #fff !important;
+   color: #777 !important;
    position: relative !important;
    z-index: 2 !important;
    background-color: transparent !important;
 }
 
-.active::before {
+.day:hover::before {
+   transform: translateX(50%) scale(1);
+}
+
+.day:hover {
+   color: #fff !important;
+}
+
+.day::before {
    content: '';
    position: absolute;
    width: 32px;
@@ -316,7 +348,7 @@ body {
    z-index: -1;
    top: 0;
    right: 50%;
-   transform: translateX(50%);
+   transform: translateX(50%) scale(0);
    border-radius: 50%;
 }
 
@@ -351,6 +383,10 @@ input:active {
    .s1__form {
       margin: 0 auto;
       margin-top: 30px;
+   }
+
+   .phone-icon {
+      max-width: 30px !important;
    }
 
    .s1__title {
@@ -408,8 +444,17 @@ input:active {
    }
 
    .py-75 {
-      padding-top: 50px;
-      padding-bottom: 70px;
+      padding-top: 50px!important;
+      padding-bottom: 70px!important;
+   }
+
+   .phone-icon {
+      max-width: 28px !important;
+      margin-right: 0 !important;
+   }
+
+   .header__logo {
+      font-size: 16px;
    }
 }
 
@@ -459,7 +504,8 @@ input:active {
    border: 1px solid transparent;
    transition: all .3s ease;
 }
-.card__button:hover{
+
+.card__button:hover {
    border: 1px solid #C1A671;
 }
 
@@ -493,8 +539,8 @@ input:active {
 .decor::before {
    content: url(../img/title-decor.png);
    position: absolute;
-   left: -39px;
-   top: 4px;
+   left: -48px;
+   top: -1px;
 }
 
 .py-75 {
@@ -691,6 +737,7 @@ input:focus {
    .s3__title {
       font-size: 24px;
       line-height: 30px;
+      margin-bottom: 45px;
    }
 }
 
@@ -797,6 +844,11 @@ input:focus {
    padding-bottom: 206px;
 }
 
+.phone-icon {
+   max-width: 34px;
+   width: 100%;
+}
+
 .s6__form {
    background: #212934;
    box-shadow: 0px 0px 10px rgba(203, 203, 203, 0.25);
@@ -804,14 +856,19 @@ input:focus {
    padding: 33px 50px;
    margin-top: 80px;
    position: relative;
+   max-width: 770px;
+   margin-right: auto;
+   margin-left: auto;
 }
 
 .s6__form::before {
    content: url(../img/merc.svg);
    position: absolute;
    transform: rotate(5deg);
-   bottom: -144px;
+   bottom: -113px;
    left: -324px;
+   width: 537px;
+   height: 231px;
 }
 
 .s6__button {
@@ -834,31 +891,59 @@ input:focus {
       content: url(../img/merc.svg);
       position: absolute;
       transform: rotate(5deg);
-      bottom: -159px;
-      left: -324px;
+      bottom: -99px;
+      left: -207px;
+      width: 437.93px;
+      height: 188.38px;
    }
 }
 
 @media(max-width:520px) {
    .s6__form::before {
-      display: none;
+      width: 285.56px;
+      height: 122.84px;
+      left: -106px;
    }
 
-   .s6__check {
-      position: relative;
+   .s6__form {
+      margin-top: 40px;
    }
 
-   .s6__check::before {
-      position: absolute;
-      content: url('../img/merc-small.svg');
-      left: 0;
-      bottom: 40px;
-      z-index: 2;
+   .s6__title {
+      margin-bottom: 15px;
+   }
+
+   .s6__subtitle {
+      font-size: 18px !important;
    }
 
    .s6__form {
       padding: 33px 20px;
    }
+
+   .swiper-comments {
+      padding-bottom: 45px;
+   }
+
+   .card__button {
+      padding: 15px 15px;
+   }
+   .s3__title{
+      padding: 0 30px;
+   }
+   .comment-slide::after {
+  top: 6px;
+  right: 6px;
+}
+.comment-slide {
+  background: #FFFFFF;
+  border: 1px solid #C1A671;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 21px 27px;}
+}
+.s5__com-name {
+  margin-right: 22px;
 }
 
 .p0 {

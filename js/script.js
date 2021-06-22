@@ -68,6 +68,7 @@ const swiperNew = new Swiper('.swiper-comments', {
       el: '.swiper-pagination-comments',
       clickable: true
    },
+   autoHeight: true,
    slidesPerView: 1,
    spaceBetween: 30,
    breakpoints: {
