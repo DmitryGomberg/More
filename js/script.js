@@ -10,12 +10,6 @@ $(document).ready(function () {
       orientation: "bottom auto",
       autoclose: true,
    });
-   $(".selector").flatpickr({
-      enableTime: true,
-      noCalendar: true,
-      dateFormat: "H:i",
-      time_24hr: true
-   });
 
    $('.select').on('click', '.select__head', function () {
       if ($(this).hasClass('open')) {
@@ -35,20 +29,53 @@ $(document).ready(function () {
       $(this).parent().prev().text($(this).text());
       $(this).parent().prev().prev().val($(this).text());
    });
-
-
+   $(document).click(function (e) {
+      if (!$(e.target).closest('.select').length) {
+         $('.select__head').removeClass('open');
+         $('.select__list').fadeOut();
+      }
+   });
+   $('.timepicker1').timepicker({
+      timeFormat: 'H:mm',
+      interval: 20,
+      minTime: '0',
+      maxTime: '23:00',
+      defaultTime: '9',
+      startTime: '00:00',
+      dynamic: false,
+      dropdown: true,
+      scrollbar: false
+   });
+   $('.timepicker2').timepicker({
+      timeFormat: 'H:mm',
+      interval: 20,
+      minTime: '0',
+      maxTime: '23:00',
+      defaultTime: '9',
+      startTime: '00:00',
+      dynamic: false,
+      dropdown: true,
+      scrollbar: false
+   });
+   $('.timepicker3').timepicker({
+      timeFormat: 'H:mm',
+      interval: 20,
+      minTime: '0',
+      maxTime: '23:00',
+      defaultTime: '9',
+      startTime: '00:00',
+      dynamic: false,
+      dropdown: true,
+      scrollbar: false
+   })
 });
-$(document).click(function (e) {
-   if (!$(e.target).closest('.select').length) {
-      $('.select__head').removeClass('open');
-      $('.select__list').fadeOut();
-   }
-});
+
 const swiper = new Swiper('.swiper-types', {
    pagination: {
       el: '.swiper-pagination-types',
       clickable: true
    },
+   autoHeight: true,
    breakpoints: {
       // when window width is >= 480px
       480: {
@@ -99,13 +126,14 @@ function init() {
 
 const MenuLinks = document.querySelectorAll('.scrollto[data-goto]');
 
-if(MenuLinks.length > 0) {
+if (MenuLinks.length > 0) {
    MenuLinks.forEach(menuLink => {
       menuLink.addEventListener("click", onMenulinkClick);
    })
-   function onMenulinkClick(e){
+
+   function onMenulinkClick(e) {
       const menuLink = e.target;
-      if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
+      if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
          e.preventDefault();
          const gotoBlock = document.querySelector(menuLink.dataset.goto);
          const gotoBlockvalue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
@@ -113,8 +141,8 @@ if(MenuLinks.length > 0) {
             top: gotoBlockvalue,
             behavior: "smooth"
          });
-         
+
       }
-      
+
    }
 }
