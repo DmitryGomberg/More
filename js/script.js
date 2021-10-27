@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   $('.preloader, .overlay').fadeOut();
+   $('.swiper-container').addClass('swiper');
    $('#phone-number').mask('+7-000-000-00-00');
    $('#phone-number-m').mask('+7-000-000-00-00');
    $('#phone-number-m-m').mask('+7-000-000-00-00');
